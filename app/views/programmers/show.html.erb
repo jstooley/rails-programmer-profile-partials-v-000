@@ -12,7 +12,13 @@
 
   <div class="col-md-9 programmer-info">
 
-    <%= render "attribute" %>
+    <%= render partial: 'attribute', locals: {attribute_name: "home_country", attribute_value: @programmer.home_country} %>
+    <%= render partial: 'attribute', locals: {attribute_name: "quote", attribute_value: @programmer.quote} %>
+    <%= render partial: 'attribute', locals: {attribute_name: "claim_to_fame", attribute_value: @programmer.claim_to_fame} %>
+
+  <p>
+    <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
+  </p>
 
   </div>
 </div>
